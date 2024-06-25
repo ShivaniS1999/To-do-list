@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { UiModule } from '../ui/ui.module';
 
 @Component({
@@ -12,6 +12,7 @@ import { UiModule } from '../ui/ui.module';
 export class DoingComponent implements OnInit, OnChanges {
 
   @Input() message!: string;
+  @Output() doingMessageEvent = new EventEmitter<string>();
 
   task: any[] = [];
 
@@ -27,7 +28,10 @@ export class DoingComponent implements OnInit, OnChanges {
       this.task.push(newMessage);
     }
   }
+  done(rowIndex:any){
+    console.log( typeof this.task[rowIndex]);
+    this.doingMessageEvent.emit(this.task[rowIndex]);
+
+  }
   
-
-
 }

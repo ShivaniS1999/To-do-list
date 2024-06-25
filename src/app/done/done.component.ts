@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
 import { UiModule } from '../ui/ui.module';
 
 @Component({
@@ -10,5 +10,19 @@ import { UiModule } from '../ui/ui.module';
 })
 export class DoneComponent {
   task: any[] = [];
+  @Input() doingMessage!: string;
 
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(this.doingMessage);
+    
+    
+    this.addMessageToTask(this.doingMessage);
 }
+addMessageToTask(newMessage: string) {
+  if (newMessage) {
+    this.task.push(newMessage);
+  }
+}
+   
+}
+

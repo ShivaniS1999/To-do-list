@@ -7,10 +7,10 @@
         <th>Action</th>
       </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-task let-columns="columns">
+    <ng-template pTemplate="body" let-task let-columns="columns" let-rowIndex="rowIndex">
       <tr>
         <td>{{ task }}</td>
-        <td><p-button label="Done" ></p-button>
+        <td><p-button label="Done" (click)="done(rowIndex)"></p-button>
         </td>
       </tr>
     </ng-template>

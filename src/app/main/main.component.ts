@@ -13,7 +13,7 @@ import { UiModule } from '../ui/ui.module';
 })
 export class MainComponent {
     message: string='';
-
+    doingMsg:string='';
     receiveMessage($event: string) {
         console.log($event);
         
@@ -21,4 +21,12 @@ export class MainComponent {
         console.log(this.message);
         
       }
+
+      receiveDoingMsg($event: any) {
+        console.log($event);
+        
+        this.doingMsg = $event;
+        
+      }
+      
 }
