@@ -1,1 +1,18 @@
-<p>doing works!</p>
+<h2>Doing</h2>
+<div class="card">
+  <p-table [value]="task" responsiveLayout="stack" [breakpoint]="'960px'" [tableStyle]="{'min-width': '50rem'}">
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th>Task Name</th>
+        <th>Action</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-task let-columns="columns">
+      <tr>
+        <td>{{ task }}</td>
+        <td><p-button label="Done" ></p-button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

@@ -1,5 +1,33 @@
-<div style="color: red;">
-    <p-checkbox [binary]="true" inputId="binary" /> To-do List <br><br>
-    <p-checkbox [binary]="true" inputId="binary" /> Doing <br><br>
-    <p-checkbox [binary]="true" inputId="binary" /> Done <br><br>
+
+<h2>To Do List</h2>
+<br>
+<div style="display: flex;justify-content: center;align-items: center;">
+    <form [formGroup]="taskForm">
+        <input type="text" pInputText formControlName="taskName" />
+        <p-button label="Add" (click)="add()"/>
+    </form>
+   
+</div>
+
+<br><br>
+<br>
+
+<div class="card">
+    <p-table [value]="task"  responsiveLayout="stack" [breakpoint]="'960px'" [tableStyle]="{'min-width': '50rem'}">
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th>Task Name</th>
+                <th>Action</th>  
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-task let-columns="columns" let-rowIndex="rowIndex">
+            <tr>
+                <td>{{ task }}</td>
+                <td>
+                    <p-button label="Doing" (click)="doing(rowIndex)"></p-button>
+                  </td>
+            </tr>
+            
+        </ng-template>
+    </p-table>
 </div>
