@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { UiModule } from '../ui/ui.module';
+import { SharedServiceService } from '../shared-service.service';
 
 @Component({
   selector: 'app-doing',
@@ -15,8 +16,12 @@ export class DoingComponent implements OnInit, OnChanges {
   @Output() doingMessageEvent = new EventEmitter<string>();
 
   task: any[] = [];
+  data!: string;
 
+  constructor( private svc:SharedServiceService){}
   ngOnInit(): void {
+    this.svc.currentData.subscribe(data => this.data = data);
+
   }
 
   ngOnChanges(changes: SimpleChanges): void {

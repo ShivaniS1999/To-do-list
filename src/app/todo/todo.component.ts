@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { UiModule } from '../ui/ui.module';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { SharedServiceService } from '../shared-service.service';
 
 @Component({
   selector: 'app-todo',
@@ -15,6 +16,7 @@ export class TodoComponent {
   @Output() messageEvent = new EventEmitter<string>();
 
 constructor(    private fb: FormBuilder,
+  private svc:SharedServiceService
 ){}
   ngOnInit() {
     this.taskForm = this.fb.group({
@@ -32,5 +34,8 @@ constructor(    private fb: FormBuilder,
     console.log(this.task[rowIndex]);
     this.messageEvent.emit(this.task[rowIndex]);
 
+  }
+  sendData() {
+    this.svc.changeData('Data from Parent');
   }
 }
