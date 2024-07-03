@@ -7,6 +7,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { LoginComponent } from './login/login.component';
 import { ForgotComponent } from './forgot/forgot.component';
+import { NewComponent } from './new/new.component';
 
 export const routes: Routes = [
     // {path:'',component:MainComponent},
@@ -14,9 +15,9 @@ export const routes: Routes = [
     // {path:'done',component:DoneComponent},
     // {path:'main',component:MainComponent},
     // {path:'',component:ParentComponent},
-    // {path:'child',component:ChildComponent}
+    // {path:'child',component:ChildComponent},
     {path:'',component:LoginComponent},
-    {path:'forgot',component:ForgotComponent}
-
+    {path:'forgot',component:ForgotComponent},
+    // {path:'new',component:NewComponent}
 
 ];
