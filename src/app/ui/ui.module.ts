@@ -5,6 +5,9 @@ import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import {  ReactiveFormsModule } from '@angular/forms';
+import { InputSwitchModule } from 'primeng/inputswitch';
+import { FormsModule } from '@angular/forms'; 
+
 
 @NgModule({
   declarations: [],
@@ -18,6 +21,8 @@ import {  ReactiveFormsModule } from '@angular/forms';
     ButtonModule,
     InputTextModule,
     ReactiveFormsModule,
+    InputSwitchModule,
+    FormsModule
     
   ]
 })
