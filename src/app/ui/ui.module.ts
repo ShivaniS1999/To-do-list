@@ -8,11 +8,12 @@ import {  ReactiveFormsModule } from '@angular/forms';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { FormsModule } from '@angular/forms'; 
 import { RouterModule } from '@angular/router';
-
+import { MessagesModule } from 'primeng/messages';
+import { MenuModule } from 'primeng/menu';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,MessagesModule
   ],
   exports: [
     CommonModule,
@@ -23,7 +24,8 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     InputSwitchModule,
     FormsModule,
-    RouterModule
+    RouterModule,MessagesModule,
+    MenuModule
     
   ]
 })

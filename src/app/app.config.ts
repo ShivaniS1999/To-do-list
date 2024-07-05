@@ -6,10 +6,11 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { UiModule } from './ui/ui.module';
 import { provideHttpClient } from '@angular/common/http';
 import { MessageService } from 'primeng/api';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(),
-    importProvidersFrom(UiModule),  provideHttpClient(), MessageService
+    importProvidersFrom(UiModule),  importProvidersFrom(BrowserAnimationsModule),  provideHttpClient(), MessageService
   ]
 };

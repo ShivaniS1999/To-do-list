@@ -1,3 +1,5 @@
+<p-menu #menu [model]="items" [popup]="true"></p-menu>
+
     <p-button [style]="{'float':'right'}" (click)="addStore()">Add Store</p-button><br><br><br>
 <p-table [rows]="10" [value]="store" [paginatorPosition]="'bottom'" [showCurrentPageReport]="true" dataKey="userId"
     [scrollable]="true" scrollHeight="60vh"
@@ -46,12 +48,12 @@
 
             <td>
 
-                <p-button icon="pi pi-ellipsis-h" styleClass="p-button-rounded p-button-text p-button-sm">
-                </p-button>
+              
+                <p-button (click)="menu.toggle($event)" (click)="handleClick(store.id)" icon="pi pi-ellipsis-v"/>
             </td>
 
         </tr>
     </ng-template>
 
-   
+  
 </p-table>

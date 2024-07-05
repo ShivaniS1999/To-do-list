@@ -70,5 +70,9 @@
   <br />
    
         <p-button (click)="submit()">submit</p-button>
+        <p-messages 
+        [(value)]="messages" 
+        [enableService]="false" 
+        [closable]="false" />
 
 </div>

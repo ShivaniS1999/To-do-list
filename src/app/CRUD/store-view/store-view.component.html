@@ -1,1 +1,29 @@
-<p>store-view works!</p>
+<div class="card">
+    <div class="flex align-items-center" style="margin-bottom: -20px">
+        <p-button icon="pi pi-angle-double-left" styleClass="p-button-lg p-button-text mb-0 p-2"  [routerLink]="''" label=""></p-button>
+        <h5 style="margin-left: 10px; margin-top: 12px">View Store Details</h5>
+
+    </div>
+    
+    <div class="card">
+        
+        <div class="grid grid-nogutter border-top-1 surface-border pt-2" style="background: linear-gradient(328deg, #e9ecef)">
+            <div class="col-12 md:col-6 lg:col-4 p-3">
+                <div class="text-800 font-medium mb-2">Store Id</div>
+                <div class="text-600">{{ store?.id }}</div>
+            </div>
+            <div class="col-12 md:col-6 lg:col-4 p-3">
+                <div class="text-800 font-medium mb-2">Store Name</div>
+                <div class="text-600">{{ store?.name }}</div>
+            </div>
+
+            <div class="col-12 md:col-6 lg:col-4 p-3">
+                <div class="text-800 font-medium mb-2">Description</div>
+                <div class="text-600">{{ store?.description }}</div>
+            </div>
+          
+        </div>
+    </div>
+
+  
+</div>

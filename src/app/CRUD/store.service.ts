@@ -26,12 +26,32 @@ export class StoreService {
     return new Promise((resolve, reject) => {
       this.http.post(environment.apiUrl, data).subscribe(
         (res: any) => {
-         
+          resolve({ ...res, status: true })
+
         },
         (error) => {
           reject(error);
         }
       );
+    });
+  }
+
+  public getStoreDetailsById(id: string) {
+    return new Promise((resolve, reject) => {
+      this.http
+        .get(environment.apiUrl + `${id}`)
+        .subscribe(
+          (res: any) => {
+            console.log(res);
+
+
+            resolve({ ...res, status: true })
+
+          },
+          (error) => {
+            reject(error);
+          }
+        );
     });
   }
 }
