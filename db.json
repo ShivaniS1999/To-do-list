@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "name": "NPST",
+      "description": "Network People Service Technology"
+    },
+    {
+      "id": "2",
+      "name": "MGM",
+      "description": "Mahatma Gandhi Mission"
+    },
+    {
+      "id": "3",
+      "name": "TIMEPAY",
+      "description": "Timepay"
+    },
+    {
+      "id": "12",
+      "name": "store ame",
+      "description": "desc"
+    },
+    {
+      "id": "003",
+      "name": "Tanishque",
+      "description": "Tanishque store"
+    },
+    {
+      "id": "002",
+      "name": "New Store",
+      "description": "My new store"
+    }
+  ]
+}

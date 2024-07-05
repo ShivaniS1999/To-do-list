@@ -10,6 +10,9 @@ import { ForgotComponent } from './forgot/forgot.component';
 import { NewComponent } from './new/new.component';
 import { MerchantComponent } from './merchant/merchant.component';
 import { CustomerComponent } from './customer/customer.component';
+import { StoreListComponent } from './CRUD/store-list/store-list.component';
+import { AddStoreComponent } from './CRUD/add-store/add-store.component';
+import { StoreViewComponent } from './CRUD/store-view/store-view.component';
 
 export const routes: Routes = [
     // {path:'',component:MainComponent},
@@ -22,7 +25,11 @@ export const routes: Routes = [
     // {path:'forgot',component:ForgotComponent},
     // {path:'new',component:NewComponent}
 
-    {path:'',component:MerchantComponent},
-    {path:'customer',component:CustomerComponent}
+    // {path:'',component:MerchantComponent},
+    // {path:'customer',component:CustomerComponent}
+
+    {path:'',component:StoreListComponent},
+    {path:'add-store',component:AddStoreComponent},
+    {path:'view-store',component:StoreViewComponent}
 
 ];

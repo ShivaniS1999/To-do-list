@@ -4,9 +4,12 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { UiModule } from './ui/ui.module';
+import { provideHttpClient } from '@angular/common/http';
+import { MessageService } from 'primeng/api';
+
 
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(),
-    importProvidersFrom(UiModule)
+    importProvidersFrom(UiModule),  provideHttpClient(), MessageService
   ]
 };

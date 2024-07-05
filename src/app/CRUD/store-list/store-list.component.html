@@ -1,0 +1,57 @@
+    <p-button [style]="{'float':'right'}" (click)="addStore()">Add Store</p-button><br><br><br>
+<p-table [rows]="10" [value]="store" [paginatorPosition]="'bottom'" [showCurrentPageReport]="true" dataKey="userId"
+    [scrollable]="true" scrollHeight="60vh"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} stores" #dt [autoLayout]="true"
+    [paginator]="true" [rowsPerPageOptions]="[10, 20, 30, 50]" [tableStyle]="{ 'min-width': '50rem' }"
+    [globalFilterFields]="['firstName', 'lastName', 'mobileNo', 'city']" [rows]="10" [paginatorPosition]="'bottom'"
+    [showCurrentPageReport]="true" scrollHeight="60vh" [alwaysShowPaginator]="true"
+    [tableStyle]="{
+      'min-width': '50rem'
+    }">
+    <ng-template pTemplate="caption">
+        <div class="flex" style="
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        ">
+
+
+        </div>
+    </ng-template>
+
+    <ng-template pTemplate="header">
+        <tr>
+            <th class="text-left">Store Id</th>
+            <th class="text-left">Store Name</th>
+            <th class="text-left">Description</th>
+            <th class="text-center" >Action</th>
+
+
+        </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-store let-i="index">
+        <tr>
+            <td class="text-left">
+                {{store.id}}
+
+            </td>
+            <td>
+                {{store.name}}
+
+            </td>
+            <td>
+                {{store.description}}
+            </td>
+
+            <td>
+
+                <p-button icon="pi pi-ellipsis-h" styleClass="p-button-rounded p-button-text p-button-sm">
+                </p-button>
+            </td>
+
+        </tr>
+    </ng-template>
+
+   
+</p-table>

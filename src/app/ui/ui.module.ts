@@ -7,7 +7,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import {  ReactiveFormsModule } from '@angular/forms';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { FormsModule } from '@angular/forms'; 
-
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [],
@@ -22,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     InputTextModule,
     ReactiveFormsModule,
     InputSwitchModule,
-    FormsModule
+    FormsModule,
+    RouterModule
     
   ]
 })
