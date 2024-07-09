@@ -1,219 +1,29 @@
 {
   "items": [
     {
-      "id": "1",
+      "id": "001",
       "name": "NPST",
       "description": "Network People Service Technology"
     },
     {
-      "id": "2",
-      "name": "MGM",
-      "description": "Mahatma Gandhi Mission"
-    },
-    {
-      "id": "3",
-      "name": "TIMEPAY",
-      "description": "Timepay"
-    },
-    {
-      "id": "12",
-      "name": "store ame",
-      "description": "desc"
+      "id": "002",
+      "name": "Timepay",
+      "description": "Timepay user karo sub log"
     },
     {
       "id": "003",
-      "name": "Tanishque",
-      "description": "Tanishque store"
+      "name": "MGM",
+      "description": "Mahatma Gandhi Mission(MGM)"
     },
     {
-      "id": "002",
-      "name": "New Store",
-      "description": "My new store"
+      "id": "004",
+      "name": "Testing",
+      "description": "Testing store"
     },
     {
       "id": "005",
-      "name": "Schinchan Store",
-      "description": "Kam karo apna "
-    },
-    {
-      "id": "006",
-      "name": "watermelon",
-      "description": "store"
-    },
-    {
-      "id": "007",
-      "name": "bond",
-      "description": "james bond"
-    },
-    {
-      "id": "6757",
-      "name": "lasdjf",
-      "description": "asldfj"
-    },
-    {
-      "id": "898",
-      "name": "jlsdjf",
-      "description": "lkdfja;s"
-    },
-    {
-      "id": "006",
-      "name": "andu ",
-      "description": "gundu"
-    },
-    {
-      "id": "11",
-      "name": "asd",
-      "description": "saf"
-    },
-    {
-      "id": "b4b9",
-      "userId": "1"
-    },
-    {
-      "id": "2d0d",
-      "userId": "1"
-    },
-    {
-      "id": "9203",
-      "userId": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "12"
-    },
-    {
-      "id": "003"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "12"
-    },
-    {
-      "id": "12"
-    },
-    {
-      "id": "12"
-    },
-    {
-      "id": "12"
+      "name": "New Store",
+      "description": "New Store opening"
     }
   ]
 }

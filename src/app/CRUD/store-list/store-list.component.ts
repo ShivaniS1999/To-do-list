@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UiModule } from '../../ui/ui.module';
 import { StoreService } from '../store.service';
 import { Router } from '@angular/router';
-import { MenuItem } from 'primeng/api';
+import { MenuItem, MessageService } from 'primeng/api';
 import { MenuModule } from 'primeng/menu';
 
 
@@ -17,7 +17,7 @@ export class StoreListComponent implements OnInit{
   store: any[] = [];
   items!: MenuItem[];
 
-  constructor(private storeSVC:StoreService,private router: Router){}
+  constructor(private storeSVC:StoreService,private router: Router, private msg: MessageService){}
   
 
   ngOnInit(){
@@ -50,18 +50,43 @@ export class StoreListComponent implements OnInit{
               {
                   label: 'Edit',
                   icon: 'pi pi-pencil',
-                  routerLink: ['/customer/customeradd'],
-
+                  routerLink: ['/add-store'],
+                  queryParams: { id: id },
+                  queryParamsHandling: 'merge',
 
               },
               {
                 label: 'Delete',
                 icon: 'pi pi-trash',
+                command: () => {
+                  this.deleteFun(id);
+                },
 
             }
           ]
       }
   ];
+   
+  }
+
+  deleteFun(id:any){
+    this.storeSVC.deleteStoreById(id).then((res) => {
+      console.log(res);
+      if (res.status) {
+        this.msg.add({
+          severity: 'success',
+          detail: 'Store deleted successfully'
+        });
+        this.store = this.store.filter(store => store.id !== id); // Update the local stores list
+      }
+    }).catch((err) => {
+      console.error(err);
+      this.msg.add({
+        severity: 'error',
+        detail: 'Error deleting store'
+      });
+    });
+      
    
   }
   addStore(){

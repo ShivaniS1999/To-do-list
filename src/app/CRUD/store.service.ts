@@ -54,4 +54,32 @@ export class StoreService {
         );
     });
   }
+
+
+
+  public updateStoreById(data: any): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.http.put(environment.apiUrl + `${data.id}`, data).subscribe(
+        (res: any) => {
+          resolve({ ...res, status: true })
+        },
+        (error) => {
+          reject(error);
+        }
+      );
+    });
+  }
+
+  public deleteStoreById(id: any): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.http.delete(environment.apiUrl + `${id}`).subscribe(
+        (res: any) => {
+          resolve({ ...res, status: true })
+        },
+        (error) => {
+          reject(error);
+        }
+      );
+    });
+  }
 }

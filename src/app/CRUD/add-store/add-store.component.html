@@ -12,18 +12,16 @@
             <div class="flex gap-5 flex-column-reverse md:flex-row">
                 <div class="flex-auto p-fluid">
                     <div class="formgrid grid">
-                        <div class="field col-12 lg:col-6 md:col-12">
-                            <label for="firstname2" htmlFor="username">Store Id<span class="text-red-600"> *</span></label
-              >
-              <div class="p-inputgroup">
-                <input
-                  pInputText
-                  placeholder="Enter store id"
-                  formControlName="id"
-                />
-           
-            </div>
-               <br>
+                        <div class="field col-12 lg:col-6 md:col-12" >
+                          <div *ngIf="show">
+                            <label for="firstname2" htmlFor="username">Store Id<span class="text-red-600"> *</span></label>
+                            <div *ngIf="show" class="p-inputgroup">
+                             <input pInputText placeholder="Enter store id"formControlName="id"/>
+            
+                           </div>
+                          </div>
+                          
+                          <br>
             <div class="field col-12 lg:col-6 md:col-12">
               <label for="firstname2"
                 >Store Name<span class="text-red-600"> *</span></label
