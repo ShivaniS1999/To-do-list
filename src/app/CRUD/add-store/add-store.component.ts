@@ -89,7 +89,7 @@ export class AddStoreComponent {
         this.storeSVC.createStore(data).then((res: any) => {
           console.log(res);
           if (res.status) {
-            this.store = res;
+            this.store = res[0];
             console.log(this.store);
 
             this.messages = [

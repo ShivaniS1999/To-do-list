@@ -4,12 +4,15 @@ import { StoreService } from '../store.service';
 import { Router } from '@angular/router';
 import { MenuItem, MessageService } from 'primeng/api';
 import { MenuModule } from 'primeng/menu';
+import { AddStoreComponent } from "../add-store/add-store.component";
+import { ChildComponent } from "../../child/child.component";
+import { StoreViewComponent } from "../store-view/store-view.component";
 
 
 @Component({
   selector: 'app-store-list',
   standalone: true,
-  imports: [UiModule,MenuModule],
+  imports: [UiModule, MenuModule, AddStoreComponent, ChildComponent, StoreViewComponent],
   templateUrl: './store-list.component.html',
   styleUrl: './store-list.component.scss'
 })
